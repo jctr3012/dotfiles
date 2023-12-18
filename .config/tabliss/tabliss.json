@@ -1,0 +1,168 @@
+{
+  "background": {
+    "display": { "blur": 0, "luminosity": 0 },
+    "id": "Wun-C7wfycHu",
+    "key": "background/colour"
+  },
+  "data/DqZps1GdNCFe": {
+    "columns": 3,
+    "linkOpenStyle": false,
+    "links": [
+      {
+        "icon": "facebook",
+        "name": "facebook",
+        "url": "https://www.facebook.com"
+      },
+      {
+        "icon": "linkedin",
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/feed"
+      },
+      {
+        "icon": "info",
+        "name": "discord",
+        "url": "https://discord.com/channels/@me"
+      },
+      {
+        "icon": "archive",
+        "name": "lukesmith",
+        "url": "https://lukesmith.xyz/"
+      },
+      { "icon": "archive", "name": "suckless", "url": "https://suckless.org/" },
+      {
+        "icon": "archive",
+        "name": "free:fonts",
+        "url": "https://www.freebestfonts.com"
+      },
+      {
+        "icon": "archive",
+        "name": "faztweb",
+        "url": "https://www.faztweb.com/"
+      },
+      {
+        "icon": "phone",
+        "name": "whatsapp",
+        "url": "https://web.whatsapp.com/"
+      },
+      {
+        "icon": "youtube",
+        "name": "youtube",
+        "url": "https://www.youtube.com/"
+      },
+      {
+        "icon": "mail",
+        "name": "@julio",
+        "url": "https://mail.google.com/mail/u/1/#inbox"
+      },
+      {
+        "icon": "mail",
+        "name": "@jean",
+        "url": "https://mail.google.com/mail/u/0/"
+      },
+      {
+        "icon": "github",
+        "name": "github:my",
+        "url": "https://github.com/jecato3012"
+      },
+      { "icon": "gitlab", "name": "gitlab:my", "url": "https://gitlab.com/" },
+      {
+        "icon": "github",
+        "name": "github:midu",
+        "url": "https://github.com/midudev"
+      },
+      {
+        "icon": "github",
+        "name": "github:faztweb",
+        "url": "https://github.com/faztweb"
+      },
+      {
+        "icon": "gitlab",
+        "name": "gitlab:dt",
+        "url": "https://gitlab.com/dwt1"
+      },
+      {
+        "icon": "github",
+        "name": "github:atareao",
+        "url": "https://github.com/atareao"
+      },
+      {
+        "icon": "github",
+        "name": "github:fazt",
+        "url": "https://github.com/fazt"
+      }
+    ],
+    "visible": true
+  },
+  "data/Wun-C7wfycHu": { "colour": "#061c28" },
+  "data/shbGwPmnu4wL": {
+    "hour12": false,
+    "mode": "digital",
+    "showDate": false,
+    "showDayPeriod": true,
+    "showMinutes": true,
+    "showSeconds": true,
+    "timeZone": "America/La_Paz"
+  },
+  "focus": false,
+  "locale": "es",
+  "timeZone": null,
+  "widget/0TBuY4PjMyta": null,
+  "widget/1Gqt3795OfGZ": null,
+  "widget/2Mh2Smbe8eHj": null,
+  "widget/DqZps1GdNCFe": {
+    "display": {
+      "fontFamily": "Iosevka Nerd FOnt",
+      "fontSize": 24,
+      "fontWeight": 700,
+      "position": "middleCentre"
+    },
+    "id": "DqZps1GdNCFe",
+    "key": "widget/links",
+    "order": 2
+  },
+  "widget/MUoRNolsoNlR": null,
+  "widget/default-greeting": null,
+  "widget/default-time": null,
+  "widget/jO-U36h9tkXz": null,
+  "widget/shbGwPmnu4wL": {
+    "display": {
+      "fontFamily": "Iosevka Nerd Font",
+      "fontSize": 12,
+      "fontWeight": 700,
+      "position": "topCentre"
+    },
+    "id": "shbGwPmnu4wL",
+    "key": "widget/time",
+    "order": 0
+  },
+  "widget/vu8DCMjBk7ZA": {
+    "display": {
+      "fontFamily": "Iosevka Nerd Font",
+      "fontSize": 24,
+      "fontWeight": 700,
+      "position": "topCentre"
+    },
+    "id": "vu8DCMjBk7ZA",
+    "key": "widget/search",
+    "order": 1
+  },
+  "widget/IfGRk7_NSPva": {
+    "id": "IfGRk7_NSPva",
+    "key": "widget/weather",
+    "order": 3,
+    "display": {
+      "position": "topCentre",
+      "fontSize": 24,
+      "fontFamily": "Iosevka Nerd Font",
+      "fontWeight": 700
+    }
+  },
+  "data/IfGRk7_NSPva": {
+    "showDetails": false,
+    "units": "si",
+    "latitude": -17.7863,
+    "longitude": -63.1812,
+    "name": "Santa Cruz"
+  },
+  "version": 3
+}
