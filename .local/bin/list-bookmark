@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+xdotool type $(grep -v '^#' /home/jc/.sources/snippets | dmenu -i -l 20 | cut -d' ' -f1)

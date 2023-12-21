@@ -1,0 +1,14 @@
+#!/usr/bin/sh
+
+bookmark="$(xclip -o)"
+file="$HOME/.sources/snippets"
+
+
+if grep -q "^$bookmark$" "$file"; then
+  notify-send "Oops Already bookmarked!"
+elif [ -z "$bookmark" ]; then
+  notify-send "Oops empty bookmark!"
+else
+  notify-send "Bookmark added!" "$bookmark is now saved to the file."
+  echo "$bookmark" >> "$file"
+fi

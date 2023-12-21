@@ -528,7 +528,7 @@ fontList:
     italic:
       family: Source Code Pro
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -545,7 +545,7 @@ fontList:
     italic:
       family: CodeNewRoman Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -562,7 +562,7 @@ fontList:
     italic:
       family: RobotoMono Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -579,7 +579,7 @@ fontList:
     italic:
       family: Hack Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -596,7 +596,7 @@ fontList:
     italic:
       family: JetBrains Mono
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -613,7 +613,7 @@ fontList:
     italic:
       family: UbuntuMono Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -630,7 +630,7 @@ fontList:
     italic:
       family: Monofur Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -647,7 +647,7 @@ fontList:
     italic:
       family: TerminessTTF Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -664,7 +664,7 @@ fontList:
     italic:
       family: Mononoki Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -681,7 +681,7 @@ fontList:
     italic:
       family: Iosevka Nerd Font
       style: italic
-    size: 11.0
+    size: 10.0
     offset:
       x: 1
       y: 1
@@ -901,7 +901,7 @@ window:
   # Background opacity
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.90
+  opacity: 0.95
 
   # Window decorations
   # Values for `decorations`:

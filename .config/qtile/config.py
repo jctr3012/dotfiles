@@ -21,6 +21,8 @@ launcher="rofi -show drun"
 keyboards = ["es"]
 fontConfig = "Iosevka Nerd Font"
 redInterface = "enp6s0"
+save_bookmark = "/home/jc/.local/bin/save-bookmark"
+list_bookmark = "/home/jc/.local/bin/list-bookmark"
 
 keys = [
     # The essentials
@@ -28,6 +30,8 @@ keys = [
     Key([mod, "shift"], "Return", lazy.spawn(myLauncher)),
     Key([mod,"mod1"],"Return",lazy.spawn(launcher)),
     Key([mod], "b", lazy.spawn(myBrowser)),
+    Key([mod,"mod1"], "s", lazy.spawn(save_bookmark)),
+    Key([mod,"mod1"], "l", lazy.spawn(list_bookmark)),
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod, "shift"], "c", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
