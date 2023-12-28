@@ -1,3 +1,16 @@
+#+title: Neovim config
+#+AUTHOR: jecato3012
+#+PROPERTY: header-args :tangle init.lua
+#+auto_tangle: t
+#+STARTUP: showverything
+
+* TABLE OF CONTENTS :toc:
+- [[#api-aliases][API ALIASES]]
+- [[#package-manager][PACKAGE MANAGER]]
+- [[#plugins][PLUGINS]]
+
+* API ALIASES
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Neovim API aliases
 -----------------------------------------------------------
@@ -10,7 +23,10 @@ local opt = vim.opt                    -- global/buffer/windows-scoped options
 local api = vim.api                    -- call Vim api
 local ag = vim.api.nvim_create_augroup -- create autogroup
 local au = vim.api.nvim_create_autocmd -- create autocomand
+#+END_SRC
 
+* PACKAGE MANAGER 
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Package manager
 -----------------------------------------------------------
@@ -27,7 +43,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+#+END_SRC
 
+* PLUGINS
+#+BEGIN_SRC lua
 require('lazy').setup({
 { 'm4xshen/autoclose.nvim', event = 'VeryLazy' },
 { 'nvim-lua/plenary.nvim' },
@@ -77,24 +96,6 @@ require('lazy').setup({
     { 'nvim-treesitter/nvim-treesitter', lazy = true },
   },
   event = 'VeryLazy',
-  config = function()
-    -- Load treesitter grammar for org
-    require('orgmode').setup_ts_grammar()
-
-    -- Setup treesitter
-    require('nvim-treesitter.configs').setup({
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = { 'org' },
-      },
-      ensure_installed = { 'org' },
-    })
-
-    require('orgmode').setup({
-      org_agenda_files = '~/notes/emacs/diary/*',
-      org_default_notes_file = '~/notes/emacs/notes.org',
-    })
-  end,
 },
  {
     "nvim-neorg/neorg",
@@ -102,20 +103,7 @@ require('lazy').setup({
     run = ":Neord sync-parses",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("neorg").setup {
-        load = {
-          ["core.defaults"] = {}, -- Loads default behaviour
-          ["core.concealer"] = {}, -- Adds pretty icons to your documents
-          ["core.dirman"] = { -- Manages Neorg workspaces
-            config = {
-              workspaces = {
-                notes = "~/notes/nvim",
-              },
-            },
-          },
-        },
-      }
-    end,
+   end,
   },
 {
     "willothy/nvim-cokeline",
@@ -1598,4 +1586,5 @@ require('lazy').setup({
     end
 },
 }
-)
+) 
+#+END_SRC

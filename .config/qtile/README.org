@@ -9,6 +9,8 @@
 - [[#features-of-qtile][Features of Qtile]]
 - [[#imports][Imports]]
 - [[#variables][Variables]]
+- [[#colorsheme][Colorsheme]]
+- [[#layout][Layout]]
 - [[#keybindings][Keybindings]]
 - [[#groups][Groups]]
 - [[#settings-for-some-layouts][Settings For Some Layouts]]
@@ -47,9 +49,10 @@ from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from typing import List  # noqa: F401
-
+# Make sure 'qtile-extras' is installed or this config will not work.
 from qtile_extras import widget
 from qtile_extras.widget.decorations import BorderDecoration
+import colors
 #+END_SRC
 
 * Variables
@@ -60,11 +63,41 @@ mod="mod4"              # Set mod key to SUPER/WINDOWS
 myTerm="alacritty"      # My terminal of choice
 myBrowser="qutebrowser" # My browser of choice
 myLauncher="dmenu_run -l 20 -g 4 -bw 4 -c -p RUN:"
-launcher="rofi -show drun"
 keyboards = ["es"]
 fontConfig = "Iosevka Nerd Font"
 redInterface = "enp6s0"
+save_bookmark = "/home/jc/.local/bin/save-bookmark"
+list_bookmark = "/home/jc/.local/bin/list-bookmark"
 #+END_SRC
+
+* Colorsheme
+#+BEGIN_SRC python
+### COLORSCHEME ###
+# Colors are defined in a separate 'colors.py' file.
+# There 10 colorschemes available to choose from:
+#
+# colors = colors.DoomOne
+# colors = colors.Dracula
+# colors = colors.GruvboxDark
+# colors = colors.MonokaiPro
+# colors = colors.Nord
+# colors = colors.OceanicNext
+# colors = colors.Palenight
+# colors = colors.SolarizedDark
+# colors = colors.SolarizedLight
+# colors = colors.TomorrowNight
+#
+# It is best not manually change the colorscheme; instead run 'dtos-colorscheme'
+# which is set to 'MOD + p c'
+
+colors = colors.DoomOne
+#+END_SRC
+
+* Layout
+Allows you to input a name when adding treetab section.
+#+begin_src python
+@lazy.layout
+#+end_src
 
 * Keybindings
 These are the keybindings for qtile.
@@ -75,6 +108,8 @@ keys = [
     Key([mod], "Return", lazy.spawn(myTerm)),
     Key([mod, "shift"], "Return", lazy.spawn(myLauncher)),
     Key([mod,"mod1"],"Return",lazy.spawn(launcher)),
+    Key([mod,"mod1"], "s", lazy.spawn(save_bookmark)),
+    Key([mod,"mod1"], "l", lazy.spawn(list_bookmark)),
     Key([mod], "b", lazy.spawn(myBrowser)),
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod, "shift"], "c", lazy.window.kill()),

@@ -1,3 +1,23 @@
+#+title: Neovim config
+#+AUTHOR: jecato3012
+#+PROPERTY: header-args :tangle init.lua
+#+auto_tangle: t
+#+STARTUP: showverything
+
+* TABLE OF CONTENTS :toc:
+- [[#api-aliases][API ALIASES]]
+- [[#general][GENERAL]]
+- [[#ui][UI]]
+- [[#folding][FOLDING]]
+- [[#memory-cpu][MEMORY, CPU]]
+- [[#tabs-indent][TABS, INDENT]]
+- [[#highlight][HIGHLIGHT]]
+- [[#spell][SPELL]]
+- [[#templates][TEMPLATES]]
+- [[#plugins][PLUGINS]]
+
+* API ALIASES
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Neovim API aliases
 -----------------------------------------------------------
@@ -10,7 +30,10 @@ local opt = vim.opt                    -- global/buffer/windows-scoped options
 local api = vim.api                    -- call Vim api
 local ag = vim.api.nvim_create_augroup -- create autogroup
 local au = vim.api.nvim_create_autocmd -- create autocomand
+#+END_SRC
 
+* GENERAL
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
@@ -18,7 +41,10 @@ g.mapleader = ';'             -- change leader to a comma
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
 opt.swapfile = false          -- don't use swapfile
+#+END_SRC
 
+* UI
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
@@ -36,7 +62,10 @@ opt.foldlevel = 99            -- should open all folds
 opt.conceallevel = 0
 opt.termguicolors = true
 opt.guifont = "Iosevka Nerd Font"
+#+END_SRC
 
+* FOLDING
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Folding
 -----------------------------------------------------------
@@ -47,7 +76,10 @@ opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
 -- opt.list = true
 -- opt.listchars = 'tab:▸ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»'
+#+END_SRC
 
+* MEMORY, CPU
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
@@ -55,7 +87,10 @@ opt.hidden = true         -- enable background buffers
 opt.history = 100         -- remember n lines in history
 -- opt.lazyredraw = true     -- faster scrolling
 opt.synmaxcol = 1000      -- max column for syntax highlight
+#+END_SRC
 
+* TABS, INDENT
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
@@ -83,7 +118,10 @@ au(
         end
     }
 )
+#+END_SRC
 
+* HIGHLIGHT
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Highlight
 -----------------------------------------------------------
@@ -98,7 +136,10 @@ au(
         group = ag('yank_highlight', {}),
     }
 )
+#+END_SRC
 
+* SPELL
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Spell
 -----------------------------------------------------------
@@ -126,7 +167,10 @@ au(
         group = markdown_spell
     }
 )
+#+END_SRC
 
+* TEMPLATES
+#+BEGIN_SRC lua
 -----------------------------------------------------------
 -- Templates
 -----------------------------------------------------------
@@ -155,5 +199,9 @@ au(
         group = ag("templates", {})
     }
 )
+#+END_SRC
 
+* PLUGINS
+#+BEGIN_SRC lua
 require("plugins")
+#+END_SRC

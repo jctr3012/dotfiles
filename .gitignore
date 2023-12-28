@@ -2,10 +2,9 @@
 !.config
 !.elinks
 !.local
-!.screenshots
-!.sources
-!.surf
-!.wallpapers
+!screenshots
+!sources
+!wallpapers
 !.Xresources
 !.bashrc
 !.fzf.bash

@@ -9,9 +9,10 @@ from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from typing import List  # noqa: F401
-
+# Make sure 'qtile-extras' is installed or this config will not work.
 from qtile_extras import widget
 from qtile_extras.widget.decorations import BorderDecoration
+import colors
 
 mod="mod4"              # Set mod key to SUPER/WINDOWS
 myTerm="alacritty"      # My terminal of choice
@@ -24,14 +25,34 @@ redInterface = "enp6s0"
 save_bookmark = "/home/jc/.local/bin/save-bookmark"
 list_bookmark = "/home/jc/.local/bin/list-bookmark"
 
+### COLORSCHEME ###
+# Colors are defined in a separate 'colors.py' file.
+# There 10 colorschemes available to choose from:
+#
+# colors = colors.DoomOne
+# colors = colors.Dracula
+# colors = colors.GruvboxDark
+# colors = colors.MonokaiPro
+# colors = colors.Nord
+# colors = colors.OceanicNext
+# colors = colors.Palenight
+# colors = colors.SolarizedDark
+# colors = colors.SolarizedLight
+# colors = colors.TomorrowNight
+#
+# It is best not manually change the colorscheme; instead run 'dtos-colorscheme'
+# which is set to 'MOD + p c'
+
+colors = colors.DoomOne
+
 keys = [
     # The essentials
     Key([mod], "Return", lazy.spawn(myTerm)),
     Key([mod, "shift"], "Return", lazy.spawn(myLauncher)),
     Key([mod,"mod1"],"Return",lazy.spawn(launcher)),
-    Key([mod], "b", lazy.spawn(myBrowser)),
     Key([mod,"mod1"], "s", lazy.spawn(save_bookmark)),
     Key([mod,"mod1"], "l", lazy.spawn(list_bookmark)),
+    Key([mod], "b", lazy.spawn(myBrowser)),
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod, "shift"], "c", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
